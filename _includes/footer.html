@@ -1,13 +1,13 @@
 <footer>
   <div class="footer-grid">
     <div>
-      <p class="footer-title">{{ site.title }}</p>
-      <p class="footer-text">Entretien et reparation automobile mobile, pense pour les gens qui veulent gagner du temps.</p>
+      <p class="footer-title">{{ site.short_title | default: site.title }}</p>
+      <p class="footer-text">Inspection mécanique mobile pré-achat pour vous aider à acheter avec plus de confiance.</p>
     </div>
     <div>
-      <p class="footer-title">Disponibilites</p>
-      <p class="footer-text">Soirs de semaine, fins de semaine et depannage local sur rendez-vous.</p>
+      <p class="footer-title">Approche</p>
+      <p class="footer-text">Aucun garage, aucune réparation, aucun intérêt caché. Le service est là pour vous donner un portrait honnête du véhicule.</p>
     </div>
   </div>
-  <p class="footer-note">&copy; {{ site.time | date: '%Y' }} {{ site.title }}. Tous droits reserves.</p>
+  <p class="footer-note">&copy; {{ site.time | date: '%Y' }} {{ site.title }}. Tous droits réservés.</p>
 </footer>
