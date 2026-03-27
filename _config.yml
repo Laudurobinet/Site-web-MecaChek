@@ -1,0 +1,17 @@
+title: Mécanique Mobile Québec
+description: Entretien et réparation automobile le soir, directement chez vous
+baseurl: ""
+url: ""
+lang: fr
+
+# Build settings
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
