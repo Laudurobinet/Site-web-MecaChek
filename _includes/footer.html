@@ -1,3 +1,13 @@
 <footer>
-  <p>&copy; {{ site.time | date: '%Y' }} {{ site.title }} – Tous droits réservés.</p>
+  <div class="footer-grid">
+    <div>
+      <p class="footer-title">{{ site.title }}</p>
+      <p class="footer-text">Entretien et reparation automobile mobile, pense pour les gens qui veulent gagner du temps.</p>
+    </div>
+    <div>
+      <p class="footer-title">Disponibilites</p>
+      <p class="footer-text">Soirs de semaine, fins de semaine et depannage local sur rendez-vous.</p>
+    </div>
+  </div>
+  <p class="footer-note">&copy; {{ site.time | date: '%Y' }} {{ site.title }}. Tous droits reserves.</p>
 </footer>

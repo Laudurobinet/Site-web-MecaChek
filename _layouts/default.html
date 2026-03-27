@@ -4,8 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.title }}</title>
-    {% assign stylesheet_path = '/assets/css/style.css' %}
-    <link rel="stylesheet" href="{% if jekyll.environment == 'development' %}{{ stylesheet_path }}{% else %}{{ stylesheet_path | relative_url }}{% endif %}">
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
     {% include header.html %}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder workshop image</title>
+  <desc id="desc">A neutral placeholder panel for future mechanic photography.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f2f6fa" />
+      <stop offset="100%" stop-color="#d9e5ef" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="560" fill="url(#panel)" />
+  <rect x="80" y="84" width="640" height="392" rx="30" fill="#ffffff" />
+  <rect x="120" y="132" width="560" height="220" rx="20" fill="#c9d8e6" />
+  <circle cx="230" cy="410" r="26" fill="#1e5a96" opacity="0.85" />
+  <circle cx="400" cy="410" r="26" fill="#1e5a96" opacity="0.65" />
+  <circle cx="570" cy="410" r="26" fill="#1e5a96" opacity="0.45" />
+  <text x="400" y="250" text-anchor="middle" fill="#15314b" font-family="Arial, sans-serif" font-size="42" font-weight="700">Photo a venir</text>
+  <text x="400" y="300" text-anchor="middle" fill="#4c647b" font-family="Arial, sans-serif" font-size="24">Remplacez ce visuel par une vraie image plus tard.</text>
+</svg>

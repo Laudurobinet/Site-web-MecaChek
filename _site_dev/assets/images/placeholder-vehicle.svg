@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800" role="img" aria-labelledby="title desc">
+  <title id="title">Placeholder vehicle service image</title>
+  <desc id="desc">A stylized illustration placeholder for a mobile mechanic website.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15314b" />
+      <stop offset="100%" stop-color="#2f6ea5" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="800" fill="url(#bg)" />
+  <circle cx="985" cy="120" r="84" fill="#ffffff" opacity="0.08" />
+  <circle cx="1080" cy="220" r="36" fill="#ffffff" opacity="0.12" />
+  <rect x="110" y="540" width="980" height="110" rx="28" fill="#0f2436" opacity="0.4" />
+  <rect x="190" y="320" width="660" height="170" rx="38" fill="#f3f7fb" />
+  <rect x="720" y="350" width="180" height="140" rx="30" fill="#f3f7fb" />
+  <path d="M310 320h260c40 0 72 19 94 57l35 61H240l24-45c13-24 26-41 46-54z" fill="#d6e4f0" />
+  <rect x="330" y="345" width="160" height="74" rx="14" fill="#7fb0d6" />
+  <rect x="510" y="345" width="120" height="74" rx="14" fill="#7fb0d6" />
+  <circle cx="360" cy="520" r="64" fill="#18222f" />
+  <circle cx="360" cy="520" r="30" fill="#8ca4bb" />
+  <circle cx="770" cy="520" r="64" fill="#18222f" />
+  <circle cx="770" cy="520" r="30" fill="#8ca4bb" />
+  <rect x="905" y="200" width="115" height="210" rx="24" fill="#ffb347" />
+  <rect x="940" y="160" width="46" height="60" rx="12" fill="#ffb347" />
+  <rect x="925" y="245" width="75" height="18" rx="9" fill="#15314b" opacity="0.35" />
+  <rect x="925" y="285" width="75" height="18" rx="9" fill="#15314b" opacity="0.35" />
+  <rect x="925" y="325" width="75" height="18" rx="9" fill="#15314b" opacity="0.35" />
+  <text x="110" y="155" fill="#ffffff" font-family="Arial, sans-serif" font-size="64" font-weight="700">Image a remplacer</text>
+  <text x="110" y="225" fill="#d6e4f0" font-family="Arial, sans-serif" font-size="30">Ajoutez ici une photo de votre service mobile, camion ou intervention.</text>
+</svg>

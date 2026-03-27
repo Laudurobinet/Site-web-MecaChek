@@ -3,17 +3,40 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mécanique Mobile Québec - Mécanique Mobile Québec</title>
-    
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <title>Mecanique Mobile Quebec - Mécanique Mobile Québec</title>
+    <link rel="stylesheet" href="assets/css/style.css">
   </head>
   <body>
-    <header>
-  <h1>Mécanique Mobile Québec</h1>
-  <p>Entretien et réparation automobile le soir, directement chez vous</p>
+    <header class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Mecanique mobile a Quebec</p>
+    <h1>Mécanique Mobile Québec</h1>
+    <p class="hero-lead">Entretien et réparation automobile le soir, directement chez vous</p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="#contact">Prendre rendez-vous</a>
+      <a class="button button-secondary" href="#services">Voir les services</a>
+    </div>
+    <ul class="hero-highlights">
+      <li>Deplacement rapide a domicile ou au travail</li>
+      <li>Soirees et fins de semaine disponibles</li>
+      <li>Prix simples et service humain</li>
+    </ul>
+  </div>
+  <div class="hero-visual">
+    <img
+      class="hero-image"
+      src="/Site-web-MecaChek/assets/images/placeholder-vehicle.svg"
+      alt="Image temporaire representant un service de mecanique mobile"
+    >
+    <div class="hero-badge">
+      <strong>Service local</strong>
+      <span>Quebec et environs</span>
+    </div>
+  </div>
 </header>
 
     <nav>
+  <a href="#gallery">Galerie</a>
   <a href="#services">Services</a>
   <a href="#tarifs">Tarifs</a>
   <a href="#contact">Contact</a>
@@ -21,42 +44,175 @@
 
     
     <main>
-      <section class="services" id="services">
-  <h2>Services offerts</h2>
-  <ul>
-    <li>Diagnostic OBD et effacement de codes</li>
-    <li>Changement de batterie, bougies, lumières</li>
-    <li>Vidange d'huile, filtres, freins</li>
-    <li>Inspection pré-achat</li>
-    <li>Survoltage et aide d'urgence</li>
-  </ul>
+      <section class="intro-band">
+  <div class="stat-card">
+    <span class="stat-value">7j/7</span>
+    <span class="stat-label">Disponibilite flexible</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-value">10 km</span>
+    <span class="stat-label">Deplacement gratuit autour de Quebec</span>
+  </div>
+  <div class="stat-card">
+    <span class="stat-value">40 $</span>
+    <span class="stat-label">Diagnostic OBD de depart</span>
+  </div>
+</section>
+
+<section class="gallery" id="gallery">
+  <div class="section-heading">
+    <p class="section-kicker">Ambiance atelier mobile</p>
+    <h2>Un style plus vivant, meme avec des images temporaires</h2>
+    <p>Ces visuels sont des placeholders pour reserver l'espace. Vous pourrez les remplacer plus tard par de vraies photos de votre camion, de vos interventions ou de clients satisfaits.</p>
+  </div>
+  <div class="image-grid">
+    <figure class="image-card">
+      <img src="/Site-web-MecaChek/assets/images/placeholder-workshop.svg" alt="Image temporaire d'un entretien mecanique">
+      <figcaption>Entretien mecanique effectue directement a domicile</figcaption>
+    </figure>
+    <figure class="image-card">
+      <img src="/Site-web-MecaChek/assets/images/placeholder-workshop.svg" alt="Image temporaire d'un changement de batterie">
+      <figcaption>Intervention rapide pour une batterie ou un demarrage difficile</figcaption>
+    </figure>
+    <figure class="image-card">
+      <img src="/Site-web-MecaChek/assets/images/placeholder-workshop.svg" alt="Image temporaire d'un diagnostic automobile">
+      <figcaption>Diagnostic clair avant de proposer les reparations utiles</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="section-heading">
+    <p class="section-kicker">Services</p>
+    <h2>Les reparations utiles, la ou votre voiture se trouve deja</h2>
+    <p>Le site presente maintenant les services dans un format plus clair et plus rassurant. C'est plus facile a lire pour un visiteur, surtout sur telephone.</p>
+  </div>
+  <div class="feature-grid">
+    <article class="feature-card">
+      <h3>Diagnostic rapide</h3>
+      <p>Lecture OBD, verification initiale et explication simple des problemes observes.</p>
+    </article>
+    <article class="feature-card">
+      <h3>Entretien courant</h3>
+      <p>Vidange, filtres, bougies, lumieres et remplacements simples sans immobiliser votre journee.</p>
+    </article>
+    <article class="feature-card">
+      <h3>Freins et batterie</h3>
+      <p>Interventions frequentes realisees sur place avec une approche pratique et rapide.</p>
+    </article>
+    <article class="feature-card">
+      <h3>Inspection avant achat</h3>
+      <p>Un regard mecanique utile avant de vous engager sur un vehicule usage.</p>
+    </article>
+    <article class="feature-card">
+      <h3>Aide d'urgence</h3>
+      <p>Survoltage, verification de base et petits depannages dans le secteur de Quebec.</p>
+    </article>
+    <article class="feature-card">
+      <h3>Service humain</h3>
+      <p>Communication simple, prix annonces clairement et rendez-vous adaptes a votre horaire.</p>
+    </article>
+  </div>
 </section>
 
 <section class="tarifs" id="tarifs">
-  <h2>Tarification</h2>
-  <ul>
-    <li>Diagnostic OBD : 40 $</li>
-    <li>Vidange moteur : 60 $</li>
-    <li>Freins (par essieu) : 80 $ à 120 $</li>
-    <li>Remplacement batterie : dès 30 $</li>
-    <li>Déplacement : gratuit dans un rayon de 10 km, puis 10 $</li>
-  </ul>
+  <div class="section-heading">
+    <p class="section-kicker">Tarification</p>
+    <h2>Des prix simples pour inspirer confiance des le premier coup d'oeil</h2>
+  </div>
+  <div class="pricing-grid">
+    <article class="price-card featured">
+      <p class="price-label">Diagnostic OBD</p>
+      <p class="price-value">40 $</p>
+      <p class="price-copy">Ideal pour identifier un voyant moteur ou verifier un probleme rapidement.</p>
+    </article>
+    <article class="price-card">
+      <p class="price-label">Vidange moteur</p>
+      <p class="price-value">60 $</p>
+      <p class="price-copy">Service d'entretien courant pratique, a domicile ou au travail.</p>
+    </article>
+    <article class="price-card">
+      <p class="price-label">Freins par essieu</p>
+      <p class="price-value">80 $ a 120 $</p>
+      <p class="price-copy">Le prix varie selon le vehicule et les pieces necessaires.</p>
+    </article>
+    <article class="price-card">
+      <p class="price-label">Remplacement de batterie</p>
+      <p class="price-value">Des 30 $</p>
+      <p class="price-copy">Parfait pour une intervention rapide avant le travail ou en soiree.</p>
+    </article>
+  </div>
+  <p class="travel-note">Deplacement gratuit dans un rayon de 10 km, puis 10 $ supplementaires.</p>
 </section>
 
-<section class="contact" id="contact">
-  <h2>Contact</h2>
-  <p>📍 Québec et environs<br>
-     📆 Service en soirée et week-ends<br>
-     📞 <strong>418-XXX-XXXX</strong><br>
-     📧 <strong>laurent.mecanique@gmail.com</strong><br>
-     📱 Facebook : <em>@MecanoMobileQc</em>
-  </p>
+<section class="process">
+  <div class="section-heading">
+    <p class="section-kicker">Comment ca marche</p>
+    <h2>Un parcours simple en trois etapes</h2>
+  </div>
+  <div class="process-grid">
+    <article class="process-card">
+      <span class="process-number">01</span>
+      <h3>Vous ecrivez</h3>
+      <p>Vous expliquez le probleme ou le service souhaite avec votre disponibilite.</p>
+    </article>
+    <article class="process-card">
+      <span class="process-number">02</span>
+      <h3>On confirme</h3>
+      <p>Vous recevez une estimation simple et une plage horaire adaptee.</p>
+    </article>
+    <article class="process-card">
+      <span class="process-number">03</span>
+      <h3>On intervient</h3>
+      <p>Le service est realise sur place avec un maximum de clarte et d'efficacite.</p>
+    </article>
+  </div>
+</section>
+
+<section class="contact contact-panel" id="contact">
+  <div class="section-heading">
+    <p class="section-kicker">Contact</p>
+    <h2>Parlez-nous de votre voiture</h2>
+    <p>La section contact est maintenant presentee comme un vrai appel a l'action, pour aider un visiteur a passer a l'etape suivante.</p>
+  </div>
+  <div class="contact-grid">
+    <div class="contact-card">
+      <p class="contact-label">Zone de service</p>
+      <p class="contact-value">Quebec et environs</p>
+    </div>
+    <div class="contact-card">
+      <p class="contact-label">Disponibilites</p>
+      <p class="contact-value">Soiree et week-ends</p>
+    </div>
+    <div class="contact-card">
+      <p class="contact-label">Telephone</p>
+      <p class="contact-value">418-XXX-XXXX</p>
+    </div>
+    <div class="contact-card">
+      <p class="contact-label">Courriel</p>
+      <p class="contact-value">laurent.mecanique@gmail.com</p>
+    </div>
+    <div class="contact-card">
+      <p class="contact-label">Facebook</p>
+      <p class="contact-value">@MecanoMobileQc</p>
+    </div>
+  </div>
 </section>
 
     </main>
 
     <footer>
-  <p>&copy; 2026 Mécanique Mobile Québec – Tous droits réservés.</p>
+  <div class="footer-grid">
+    <div>
+      <p class="footer-title">Mécanique Mobile Québec</p>
+      <p class="footer-text">Entretien et reparation automobile mobile, pense pour les gens qui veulent gagner du temps.</p>
+    </div>
+    <div>
+      <p class="footer-title">Disponibilites</p>
+      <p class="footer-text">Soirs de semaine, fins de semaine et depannage local sur rendez-vous.</p>
+    </div>
+  </div>
+  <p class="footer-note">&copy; 2026 Mécanique Mobile Québec. Tous droits reserves.</p>
 </footer>
 
   </body>
