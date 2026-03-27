@@ -438,6 +438,7 @@ section {
 
 .contact-card {
   min-height: 100%;
+  min-width: 0;
   padding: 1.2rem;
   background: rgba(255, 255, 255, 0.09);
   border-color: rgba(255, 255, 255, 0.12);
@@ -452,6 +453,9 @@ section {
 .contact-value {
   margin-top: 0.45rem;
   font-weight: 700;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+  hyphens: auto;
 }
 
 footer {
