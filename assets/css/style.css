@@ -150,6 +150,24 @@ body::before {
   max-width: 10ch;
 }
 
+.hero-brand {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: clamp(1.15rem, 2vw, 1.7rem);
+  line-height: 1.1;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #d7e4ed;
+}
+
+.hero-region {
+  font-size: 0.48em;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #d7e4ed;
+  white-space: nowrap;
+}
+
 .hero-lead {
   color: rgba(244, 247, 249, 0.84);
   font-size: 1.08rem;
@@ -323,6 +341,7 @@ section {
 
 .image-grid,
 .feature-grid,
+.inspection-grid,
 .pricing-grid,
 .process-grid,
 .contact-grid {
@@ -347,6 +366,76 @@ section {
   background: linear-gradient(135deg, var(--brand-soft), #eef3f7);
 }
 
+.photo-carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 18px 18px 0 0;
+}
+
+.carousel-track {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track img {
+  width: 100%;
+  scroll-snap-align: start;
+}
+
+.carousel-arrow {
+  appearance: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.9rem;
+  height: 2.9rem;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 999px;
+  color: #fff;
+  background: rgba(14, 37, 50, 0.34);
+  backdrop-filter: blur(10px);
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.carousel-arrow:hover {
+  background: rgba(14, 37, 50, 0.56);
+}
+
+.carousel-arrow:active {
+  transform: translateY(-50%) scale(0.96);
+}
+
+.carousel-arrow-prev {
+  left: 0.8rem;
+}
+
+.carousel-arrow-next {
+  right: 0.8rem;
+}
+
+.carousel-arrow span {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
 .image-card figcaption {
   padding: 1rem 1.1rem 1.2rem;
   color: var(--muted);
@@ -359,6 +448,49 @@ section {
 .feature-card {
   padding: 1.35rem;
   box-shadow: 0 14px 28px rgba(20, 32, 42, 0.04);
+}
+
+.inspection-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+}
+
+.inspection-card {
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--line);
+  background: var(--surface-strong);
+  box-shadow: 0 14px 28px rgba(20, 32, 42, 0.04);
+}
+
+.inspection-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+  padding: 0 0.9rem;
+  border-radius: 999px;
+  font-weight: 800;
+  color: var(--brand);
+  background: var(--brand-soft);
+}
+
+.inspection-card h3 {
+  font-size: 1.14rem;
+  margin-bottom: 0.8rem;
+}
+
+.inspection-list {
+  display: grid;
+  gap: 0.65rem;
+  padding-left: 1.2rem;
+  color: var(--muted);
+}
+
+.inspection-list li::marker {
+  color: var(--accent);
 }
 
 .feature-card h3,
@@ -383,6 +515,101 @@ section {
 
 .price-card {
   padding: 1.4rem;
+}
+
+.travel-estimator {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.travel-estimator-title {
+  margin-bottom: 0.45rem;
+  font-size: 0.92rem;
+  font-weight: 800;
+  color: var(--ink);
+}
+
+.travel-estimator-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.83rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.travel-estimator-controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 0.55rem;
+}
+
+.travel-estimator-input {
+  min-width: 0;
+  flex: 1 1 auto;
+  height: 2.7rem;
+  padding: 0 0.9rem;
+  border: 1px solid rgba(19, 33, 45, 0.18);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.92);
+  color: var(--ink);
+  font: inherit;
+  text-transform: uppercase;
+}
+
+.travel-estimator-input:focus {
+  outline: none;
+  border-color: rgba(22, 56, 76, 0.44);
+  box-shadow: 0 0 0 4px rgba(22, 56, 76, 0.08);
+}
+
+.travel-estimator-button {
+  appearance: none;
+  border: 0;
+  min-width: 6.2rem;
+  height: 2.7rem;
+  padding: 0 1rem;
+  border-radius: 14px;
+  background: var(--brand);
+  color: #fff;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.travel-estimator-button:hover {
+  background: var(--brand-strong);
+  transform: translateY(-1px);
+}
+
+.travel-estimator-note,
+.travel-estimator-result {
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+.travel-estimator-result {
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.7rem;
+  padding: 0 0.9rem;
+  border-radius: 14px;
+  background: rgba(22, 56, 76, 0.08);
+  color: var(--brand);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+.travel-estimator-result:empty {
+  display: none;
+}
+
+.travel-estimator-note {
+  margin-top: 0.7rem;
 }
 
 .featured {
@@ -546,6 +773,7 @@ footer {
   .trust-band,
   .image-grid,
   .feature-grid,
+  .inspection-grid,
   .pricing-grid,
   .process-grid,
   .contact-grid,
@@ -561,6 +789,11 @@ footer {
   .hero-shell {
     align-items: start;
     flex-direction: column;
+  }
+
+  .travel-estimator-controls {
+    flex-direction: column;
+    align-items: stretch;
   }
 }
 
@@ -595,6 +828,7 @@ footer {
   .trust-band,
   .image-grid,
   .feature-grid,
+  .inspection-grid,
   .pricing-grid,
   .process-grid,
   .contact-grid,
