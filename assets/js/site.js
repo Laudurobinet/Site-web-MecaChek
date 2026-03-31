@@ -1,12 +1,128 @@
+const getCarouselIndex = (track) => {
+  const step = track.clientWidth;
+
+  if (!step) {
+    return 0;
+  }
+
+  return Math.round(track.scrollLeft / step);
+};
+
+const lightbox = document.querySelector("[data-lightbox]");
+const lightboxImage = lightbox?.querySelector("[data-lightbox-image]");
+const lightboxCaption = lightbox?.querySelector("[data-lightbox-caption]");
+const lightboxCounter = lightbox?.querySelector("[data-lightbox-counter]");
+const lightboxPrev = lightbox?.querySelector("[data-lightbox-prev]");
+const lightboxNext = lightbox?.querySelector("[data-lightbox-next]");
+const lightboxCloseButtons = lightbox?.querySelectorAll("[data-lightbox-close]");
+
+let activeLightboxImages = [];
+let activeLightboxIndex = 0;
+let activeExpandButton = null;
+
+const renderLightbox = () => {
+  if (!lightboxImage || !lightboxCaption || !lightboxCounter || !activeLightboxImages.length) {
+    return;
+  }
+
+  const currentImage = activeLightboxImages[activeLightboxIndex];
+
+  if (!currentImage) {
+    return;
+  }
+
+  lightboxImage.src = currentImage.src;
+  lightboxImage.alt = currentImage.alt;
+  lightboxCaption.textContent = currentImage.alt;
+  lightboxCounter.textContent = `${activeLightboxIndex + 1} / ${activeLightboxImages.length}`;
+};
+
+const changeLightboxImage = (direction) => {
+  if (!activeLightboxImages.length) {
+    return;
+  }
+
+  activeLightboxIndex =
+    (activeLightboxIndex + direction + activeLightboxImages.length) % activeLightboxImages.length;
+
+  renderLightbox();
+};
+
+const closeLightbox = () => {
+  if (!lightbox || lightbox.hidden) {
+    return;
+  }
+
+  lightbox.hidden = true;
+  lightbox.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+
+  if (activeExpandButton) {
+    activeExpandButton.focus();
+  }
+};
+
+const openLightbox = (images, startIndex, triggerButton) => {
+  if (!lightbox || !lightboxImage || !images.length) {
+    return;
+  }
+
+  activeLightboxImages = images;
+  activeLightboxIndex = startIndex;
+  activeExpandButton = triggerButton;
+
+  renderLightbox();
+  lightbox.hidden = false;
+  lightbox.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+  lightboxCloseButtons?.[1]?.focus();
+};
+
+if (lightbox) {
+  lightboxPrev?.addEventListener("click", () => {
+    changeLightboxImage(-1);
+  });
+
+  lightboxNext?.addEventListener("click", () => {
+    changeLightboxImage(1);
+  });
+
+  lightboxCloseButtons?.forEach((button) => {
+    button.addEventListener("click", closeLightbox);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (lightbox.hidden) {
+      return;
+    }
+
+    if (event.key === "Escape") {
+      closeLightbox();
+      return;
+    }
+
+    if (event.key === "ArrowLeft") {
+      changeLightboxImage(-1);
+      return;
+    }
+
+    if (event.key === "ArrowRight") {
+      changeLightboxImage(1);
+    }
+  });
+}
+
 document.querySelectorAll("[data-carousel]").forEach((carousel) => {
   const track = carousel.querySelector("[data-carousel-track]");
   const prev = carousel.querySelector("[data-carousel-prev]");
   const next = carousel.querySelector("[data-carousel-next]");
+  const expand = carousel.querySelector("[data-carousel-expand]");
 
   if (!track || !prev || !next) {
     return;
   }
 
+  const images = Array.from(track.querySelectorAll("img"));
   const step = () => track.clientWidth;
 
   prev.addEventListener("click", () => {
@@ -15,6 +131,10 @@ document.querySelectorAll("[data-carousel]").forEach((carousel) => {
 
   next.addEventListener("click", () => {
     track.scrollBy({ left: step(), behavior: "smooth" });
+  });
+
+  expand?.addEventListener("click", () => {
+    openLightbox(images, getCarouselIndex(track), expand);
   });
 });
 

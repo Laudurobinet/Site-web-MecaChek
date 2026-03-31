@@ -4,36 +4,6 @@ title: Inspection pré-achat mobile
 permalink: /
 ---
 
-<section class="intro-band">
-  <div class="stat-card">
-    <span class="stat-value">PDF</span>
-    <span class="stat-label">Rapport complet pour acheter avec plus de certitude</span>
-  </div>
-  <div class="stat-card">
-    <span class="stat-value">100 $</span>
-    <span class="stat-label">Tarif simple pour auto, camion et VUS</span>
-  </div>
-  <div class="stat-card">
-    <span class="stat-value">20 km</span>
-    <span class="stat-label">Déplacement inclus autour de Québec</span>
-  </div>
-</section>
-
-<section class="trust-band">
-  <div class="trust-card">
-    <p class="trust-title">Expertise terrain</p>
-    <p class="trust-copy">Inspection faite sur place, dans les vraies conditions où le véhicule se trouve.</p>
-  </div>
-  <div class="trust-card">
-    <p class="trust-title">Oeil de lynx</p>
-    <p class="trust-copy">On cherche les signes qui passent souvent sous le radar avant une transaction.</p>
-  </div>
-  <div class="trust-card">
-    <p class="trust-title">Avis indépendant</p>
-    <p class="trust-copy">Pas de garage, pas de réparation à vendre, juste un portrait honnête du véhicule.</p>
-  </div>
-</section>
-
 <section class="gallery" id="gallery">
   <div class="section-heading">
     <p class="section-kicker">Inspection sur place</p>
@@ -47,11 +17,14 @@ permalink: /
           <span aria-hidden="true">&#8249;</span>
         </button>
         <div class="carousel-track" data-carousel-track>
-          <img src="{{ '/assets/images/Image_a_mettre_plus_bas1.jpg' | relative_url }}" alt="Inspection mécanique d'un véhicule sous un premier angle">
-          <img src="{{ '/assets/images/Image_a_mettre_plus_bas1.jpg' | relative_url }}" alt="Ajoutez une autre photo de cette inspection dans ce carrousel">
+          <img src="{{ '/assets/images/Image_a_mettre_plus_bas1.jpg' | relative_url }}" alt="Vérification de tous les codes actifs ou en attente du véhicule.">
+          <img src="{{ '/assets/images/Image_a_mettre_plus_bas2.jpg' | relative_url }}" alt="Inspection du compartiment moteur afin de vérifier la présence de fuites ou d'anomalies.">
         </div>
         <button class="carousel-arrow carousel-arrow-next" type="button" aria-label="Photo suivante" data-carousel-next>
           <span aria-hidden="true">&#8250;</span>
+        </button>
+        <button class="carousel-expand" type="button" aria-label="Agrandir les photos" data-carousel-expand>
+          Agrandir
         </button>
       </div>
       <figcaption>Inspection mobile directement sur place pour voir le véhicule dans ses vraies conditions.</figcaption>
@@ -62,11 +35,14 @@ permalink: /
           <span aria-hidden="true">&#8249;</span>
         </button>
         <div class="carousel-track" data-carousel-track>
-          <img src="{{ '/assets/images/Image_a_mettre_plus_bas2.jpg' | relative_url }}" alt="Inspection pré-achat d'un véhicule sous un deuxième angle">
-          <img src="{{ '/assets/images/Image_a_mettre_plus_bas2.jpg' | relative_url }}" alt="Ajoutez une autre photo de cette inspection dans ce carrousel">
+          <img src="{{ '/assets/images/Paint_1.jpg' | relative_url }}" alt="Mesure de l'epaisseur de peinture sur un vehicule">
+          <img src="{{ '/assets/images/Paint_2.jpg' | relative_url }}" alt="Verification de la peinture pour reperer une reparation anterieure">
         </div>
         <button class="carousel-arrow carousel-arrow-next" type="button" aria-label="Photo suivante" data-carousel-next>
           <span aria-hidden="true">&#8250;</span>
+        </button>
+        <button class="carousel-expand" type="button" aria-label="Agrandir les photos" data-carousel-expand>
+          Agrandir
         </button>
       </div>
       <figcaption>Vérification visuelle et mécanique détaillée avant de conclure la transaction.</figcaption>
@@ -77,17 +53,40 @@ permalink: /
           <span aria-hidden="true">&#8249;</span>
         </button>
         <div class="carousel-track" data-carousel-track>
-          <img src="{{ '/assets/images/Image_a_mettre_plus_bas3.jpg' | relative_url }}" alt="Inspection de véhicule sous un troisième angle pendant l'analyse">
-          <img src="{{ '/assets/images/Image_a_mettre_plus_bas3.jpg' | relative_url }}" alt="Ajoutez une autre photo de cette inspection dans ce carrousel">
+          <img src="{{ '/assets/images/Chek rouille.jpg' | relative_url }}" alt="Inspection visuelle de la rouille sur un véhicule">
+          <img src="{{ '/assets/images/Chek rocker.jpg' | relative_url }}" alt="Vérification du rocker et de l'état de la carrosserie">
         </div>
         <button class="carousel-arrow carousel-arrow-next" type="button" aria-label="Photo suivante" data-carousel-next>
           <span aria-hidden="true">&#8250;</span>
+        </button>
+        <button class="carousel-expand" type="button" aria-label="Agrandir les photos" data-carousel-expand>
+          Agrandir
         </button>
       </div>
       <figcaption>Analyse terrain sous plusieurs angles pour vous remettre un verdict plus solide.</figcaption>
     </figure>
   </div>
 </section>
+
+<div class="lightbox" data-lightbox hidden aria-hidden="true">
+  <div class="lightbox-backdrop" data-lightbox-close></div>
+  <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Visionneuse de photos">
+    <button class="lightbox-close" type="button" aria-label="Fermer" data-lightbox-close>&times;</button>
+    <div class="lightbox-carousel">
+      <button class="lightbox-arrow lightbox-arrow-prev" type="button" aria-label="Photo précédente" data-lightbox-prev>
+        <span aria-hidden="true">&#8249;</span>
+      </button>
+      <figure class="lightbox-figure">
+        <img class="lightbox-image" src="" alt="" data-lightbox-image>
+      </figure>
+      <button class="lightbox-arrow lightbox-arrow-next" type="button" aria-label="Photo suivante" data-lightbox-next>
+        <span aria-hidden="true">&#8250;</span>
+      </button>
+    </div>
+    <p class="lightbox-caption" data-lightbox-caption></p>
+    <p class="lightbox-counter" data-lightbox-counter></p>
+  </div>
+</div>
 
 <section class="services" id="services">
   <div class="section-heading">
@@ -237,28 +236,42 @@ permalink: /
   <div class="section-heading">
     <p class="section-kicker">Contact</p>
     <h2>Parlez-moi du véhicule que vous voulez faire inspecter</h2>
-    <p>Laurent est technicien détenteur d'un DEP en mécanique automobile. Il n'est affilié à aucun garage et n'offre aucun service de réparation. Son seul intérêt est de vous donner un avis honnête, pour vous et non pour le vendeur.</p>
+    <p>Laurent est technicien diplômé en mécanique automobile. Aucun garage, aucune réparation à vendre: seulement un avis honnête et indépendant pour vous aider à acheter avec plus de confiance, à Québec et dans les environs.</p>
   </div>
   <div class="contact-grid">
+    <div class="contact-card contact-card-primary">
+      <p class="contact-label">Messenger</p>
+      <p class="contact-value">Réponse rapide dans la journée</p>
+      <p class="contact-copy">Envoyez l'annonce, l'adresse du vendeur et le type de véhicule pour obtenir une réponse simple et rapide.</p>
+      <div class="contact-actions">
+        <a class="contact-action contact-action-primary" href="https://m.me/61577521534465" target="_blank" rel="noopener noreferrer" aria-label="Écrire sur Messenger">
+          <span>Écrire sur Messenger</span>
+        </a>
+        <a class="contact-action contact-action-secondary" href="https://www.facebook.com/profile.php?id=61577521534465" target="_blank" rel="noopener noreferrer" aria-label="Voir la page Facebook MecaChek">
+          <svg class="contact-social-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073c0 6.026 4.388 11.022 10.125 11.927v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.792-4.697 4.533-4.697 1.313 0 2.686.235 2.686.235v2.97H15.83c-1.491 0-1.956.928-1.956 1.88v2.258h3.328l-.532 3.49h-2.796V24C19.612 23.095 24 18.099 24 12.073z" />
+          </svg>
+          <span>Voir la page Facebook</span>
+        </a>
+      </div>
+    </div>
     <div class="contact-card">
-      <p class="contact-label">Secteur</p>
-      <p class="contact-value">Québec et région</p>
+      <p class="contact-label">Téléphone</p>
+      <a class="contact-value contact-link" href="tel:4184783122">418-478-3122</a>
+      <p class="contact-copy">Idéal pour confirmer rapidement une disponibilité ou poser une question directe.</p>
+    </div>
+    <div class="contact-card">
+      <p class="contact-label">Courriel</p>
+      <a class="contact-value contact-link" href="mailto:mecachek.qc@gmail.com">mecachek.qc@gmail.com</a>
+      <p class="contact-copy">Parfait si vous voulez envoyer les détails du véhicule et garder une trace écrite.</p>
     </div>
     <div class="contact-card">
       <p class="contact-label">Disponibilités</p>
       <p class="contact-value">Soirs de semaine et certaines fins de semaine</p>
-    </div>
-    <div class="contact-card">
-      <p class="contact-label">Téléphone</p>
-      <p class="contact-value">418-XXX-XXXX</p>
-    </div>
-    <div class="contact-card">
-      <p class="contact-label">Courriel</p>
-      <p class="contact-value">laurent.mecanique@gmail.com</p>
-    </div>
-    <div class="contact-card">
-      <p class="contact-label">Réponse rapide</p>
-      <p class="contact-value">Message Marketplace ou courriel</p>
+      <p class="contact-copy">Interventions à Québec et dans les environs selon le déplacement à prévoir.</p>
     </div>
   </div>
 </section>
+
+
+
